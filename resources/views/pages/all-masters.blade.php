@@ -1,6 +1,6 @@
 @extends('main')
 @section('content')
-    <div class="card mt-5">
+    <div class="card m-5">
         @foreach($mechanics as $master)
             <div id="container">
                     <img src="{{asset('/storage/'.$master->photo)}}" style="height: 110px; width: 130px; float: left; padding: 5px;">
