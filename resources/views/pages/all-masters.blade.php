@@ -17,7 +17,7 @@
                     <li>{{$master->service_id}}</li>
                     <li>{{$master->city}}</li>
                 </ul>
-                <h4>Veiksmai:</h4>
+                <h4 class="mx-3">Veiksmai:</h4>
                 <ul>
                     <li><a href="/master/edit/{{$master->id}}">Redaguoti</a></li>
                     <li><a href="/master/delete/{{$master->id}}">Šalinti</a></li>
