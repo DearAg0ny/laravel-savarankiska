@@ -5,7 +5,7 @@
     <form action="/storeService" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group m-1">
-            <input type="text" name="service_name" class="form-control" placeholder="Serviso pavadinimas">
+            <input type="text" name="title" class="form-control" placeholder="Serviso pavadinimas">
         </div>
         <div class="form-group m-1">
             <input type="text" name="address" class="form-control" placeholder="Serviso adresas">

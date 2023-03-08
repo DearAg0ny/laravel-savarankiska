@@ -18,8 +18,10 @@
         </div>
         <div class="form-group m-1">
             <select name="service_id" class="form-control">
-                <option selected disabled>Pasirinkite servisas</option>
-                    <option value="Testas">Testas</option>
+                <option selected disabled>Pasirinkite servisą</option>
+                @foreach($services as $service)
+                    <option value="{{$service->title}}">{{$service->title}}</option>
+                @endforeach
             </select>
         </div>
         <div class="div-group m-1">

@@ -1,7 +1,7 @@
 @extends('main')
 @section('content')
     <div class="card mt-5">
-        <h1 class="mt-4">{{$service->service_name}}</h1>
+        <h1 class="mt-4">{{$service->title}}</h1>
         <h3>Kita informacija apie servisą:</h3>
         <ul>
             <li>Adresas: {{$service->address}}</li>

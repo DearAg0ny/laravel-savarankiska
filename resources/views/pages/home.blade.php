@@ -8,7 +8,7 @@
                     li {list-style-type: none;}
                 </style>
                 <ul class="card p-2">
-                    <li>{{$service->service_name}}</li>
+                    <li>{{$service->name}}</li>
                     <li><a href="/service/{{$service->id}}">Plačiau...</a></li>
                 </ul>
             </div>

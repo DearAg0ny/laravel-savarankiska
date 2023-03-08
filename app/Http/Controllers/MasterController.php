@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Mechanic;
+use App\Models\Service;
 use File;
 
 
@@ -17,8 +18,8 @@ class MasterController extends Controller
 
     public function addMechanics()
     {
-        $mechanics = Mechanic::all();
-        return view('pages.add-master',compact('mechanics'));
+        $services = Service::all();
+        return view('pages.add-master',compact('services'));
     }
 
     public function store(Request $request)

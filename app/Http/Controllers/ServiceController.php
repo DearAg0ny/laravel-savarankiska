@@ -21,13 +21,13 @@ class ServiceController extends Controller
 
     public function store(Request $request){
         $validated = $request->validate([
-            'service_name'=>'required',
+            'title'=>'required',
             'address'=>'required',
             'manager'=>'required'
         ]);
 
         Service::create([
-            'service_name'=>request('service_name'),
+            'title'=>request('title'),
             'address'=>request('address'),
             'manager'=>request('manager'),
         ]);
@@ -44,7 +44,7 @@ class ServiceController extends Controller
 
     public function storeUpdate(Service $service, Request $request){
         Service::where('id',$service->id)->update(
-            $request->only(['service_name','address','manager'])
+            $request->only(['title','address','manager'])
         );
 
         return redirect('/service/'.$service->id);

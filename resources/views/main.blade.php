@@ -6,7 +6,7 @@
     <!-- Sidebar-->
 @include('_partials/sidebar')
 <!-- Page content wrapper-->
-    <div id="page-content-wrapper">
+    <div id="page-content-wrapper" style="background-color: #F0F0F0;">
         <!-- Top navigation-->
     @include('_partials/nav')
     <!-- Page content-->

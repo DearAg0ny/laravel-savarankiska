@@ -5,7 +5,7 @@
     <form action="/update/{{$service->id}}" method="post">
         @csrf
         <div class="form-group m-1">
-            <input type="text" name="service_name" class="form-control" placeholder="Serviso pavadinimas" value="{{$service->service_name}}">
+            <input type="text" name="name" class="form-control" placeholder="Serviso pavadinimas" value="{{$service->service_name}}">
         </div>
         <div class="form-group m-1">
             <input type="text" name="address" class="form-control" placeholder="Serviso adresas" value="{{$service->address}}">
