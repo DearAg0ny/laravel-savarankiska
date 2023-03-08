@@ -10,7 +10,7 @@
     <div class="card m-5">
         @foreach($mechanics as $master)
             <div id="container">
-                    <img src="{{asset('/storage/'.$master->photo)}}" style="height: 110px; width: 130px; float: left; padding: 5px;">
+                    <img src="{{asset('/storage/'.$master->photo)}}" style="height: 110px; width: 130px; float: left; padding: 10px;">
                 <ul style="padding-top: 5px;">
                     <li>{{$master->name}} {{$master->lname}}<li>
                     <li>{{$master->type}}</li>
