@@ -1,5 +1,12 @@
 @extends('main')
 @section('content')
+<div class="card mt-2 mx-5">
+        <nav class="navbar" style="background-color: mediumseagreen">
+            <form class="form-inline">
+                <input class="form-control m-sm-2" type="search" placeholder="Paieška" aria-label="Search">
+            </form>
+        </nav>
+    </div>
     <div class="card m-5">
         @foreach($mechanics as $master)
             <div id="container">
