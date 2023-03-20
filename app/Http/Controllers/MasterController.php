@@ -13,7 +13,7 @@ class MasterController extends Controller
     public function index()
     {
         $mechanics = Mechanic::all();
-        return view('pages.all-masters', compact('mechanics'));
+        return view('pages.home', compact('mechanics'));
     }
 
     public function addMechanics()
@@ -72,5 +72,10 @@ class MasterController extends Controller
         $mechanic->delete();
 
         return redirect('/all-masters');
+    }
+
+    public function searchResults(){
+        $results = Mechanic::where('name','like','%'.request('search').'%')->get();
+        return view('pages.search', compact('results'));
     }
 }

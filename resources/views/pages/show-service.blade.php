@@ -7,11 +7,14 @@
             <li>Adresas: {{$service->address}}</li>
             <li>Vadovas: {{$service->manager}}</li>
         </ul>
+        @if(Auth::check())
         <h4>Veiksmai:</h4>
         <ul>
             <li><a href="/service/edit/{{$service->id}}">Redaguoti</a></li>
             <li><a href="/service/delete/{{$service->id}}">Šalinti</a></li>
         </ul>
+        @else
+        @endif
     </div>
 
 
