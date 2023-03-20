@@ -75,7 +75,12 @@ class MasterController extends Controller
     }
 
     public function searchResults(){
-        $results = Mechanic::where('name','like','%'.request('search').'%')->get();
+        $results = [];
+        if (request('search')){
+            $results = Mechanic::where('name','like','%'.request('search').'%')->get();
+        }elseif (request('type')){
+            $results = Mechanic::where('type',request('type'))->get();
+        }
         return view('pages.search', compact('results'));
     }
 }

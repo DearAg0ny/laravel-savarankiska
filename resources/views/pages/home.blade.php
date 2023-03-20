@@ -5,10 +5,18 @@
             <form class="form-inline" action="/searchMaster" method="post">
                 @csrf
                 <div class="form-group row">
-                    <div class="col-sm-8">
+                    <div class="col-sm-5">
                         <input class="form-control m-sm-2" type="search" name="search" placeholder="Įveskite meistro vardą" aria-label="Search">
                     </div>
-                    <div class="col-sm-4 mt-2">
+                    <div class="col-sm-5 mt-2">
+                        <select class="form-select" aria-label="Default select example" name="type">
+                            <option selected disabled>Pasirinkite specialybę</option>
+                                @foreach($mechanics as $master)
+                                    <option value="{{$master->type}}">{{$master->type}}</option>
+                                @endforeach
+                        </select>
+                    </div>
+                    <div class="col-sm-2 mt-2">
                         <button type="submit" class="btn btn-primary">Ieškoti</button>
                     </div>
                 </div>
