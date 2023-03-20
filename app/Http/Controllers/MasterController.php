@@ -87,9 +87,9 @@ class MasterController extends Controller
 
     public function updateRating(Mechanic $mechanic, Request $request){
         Mechanic::where('id',$mechanic->id)->update([
-            'rating'=>request('addRating')
+            'rating'=>\DB::raw('rating+1')
 
             ]);
-        return view('pages.update-rating', compact('mechanic'));
+        return redirect('/');
     }
 }
