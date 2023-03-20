@@ -32,6 +32,7 @@ Route::get('/master/edit/{mechanic}',[MasterController::class,'editMechanic']);
 Route::post('/master/update/{mechanic}',[MasterController::class,'update']);
 Route::get('/master/delete/{mechanic}',[MasterController::class,'deleteMechanic']);
 Route::post('/searchMaster',[MasterController::class,'searchResults']);
+Route::post('/update-rating',[MasterController::class,'updateRating']);
 
 
 Auth::routes();

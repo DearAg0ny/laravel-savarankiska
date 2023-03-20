@@ -41,6 +41,7 @@ class MasterController extends Controller
             'photo'=>$fileName,
             'city'=>request('city'),
             'service_id'=>request('service_id'),
+            'rating'=>request('rating')
         ]);
         return redirect('/');
     }
@@ -65,7 +66,7 @@ class MasterController extends Controller
             $request->only(['name','lname','type','city'])
         );
 
-        return redirect('/all-masters');
+        return redirect('/');
     }
 
     public function deleteMechanic(Mechanic $mechanic){
@@ -82,5 +83,13 @@ class MasterController extends Controller
             $results = Mechanic::where('type',request('type'))->get();
         }
         return view('pages.search', compact('results'));
+    }
+
+    public function updateRating(Mechanic $mechanic, Request $request){
+        Mechanic::where('id',$mechanic->id)->update([
+            'rating'=>request('addRating')
+
+            ]);
+        return view('pages.update-rating', compact('mechanic'));
     }
 }

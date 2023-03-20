@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('photo')->nullable();
             $table->string('service_id');
+            $table->integer('rating');
             $table->timestamps();
         });
     }

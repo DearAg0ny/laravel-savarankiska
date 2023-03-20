@@ -10,7 +10,7 @@ class Mechanic extends Model
 {
     use HasFactory;
 
-    protected $fillable =['name','lname','type','city','photo','service_id'];
+    protected $fillable =['name','lname','type','city','photo','service_id','rating'];
 
     public function services(){
         return $this->belongsTo(Service::class);

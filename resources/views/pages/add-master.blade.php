@@ -17,6 +17,9 @@
             <input type="text" class="form-control" name="city" placeholder="Miestas">
         </div>
         <div class="form-group m-1">
+            <input type="number" class="form-control" name="rating" placeholder="Reitingas">
+        </div>
+        <div class="form-group m-1">
             <select name="service_id" class="form-control">
                 <option selected disabled>Pasirinkite servisą</option>
                 @foreach($services as $service)

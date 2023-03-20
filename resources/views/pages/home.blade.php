@@ -24,8 +24,9 @@
         </nav>
     </div>
     <div class="card m-5">
+        <div class="row">
         @foreach($mechanics as $master)
-            <div id="container">
+            <div id="container" class="col-sm-4">
                     <img src="{{asset('/storage/'.$master->photo)}}" style="height: 100px; width: 120px; float: left; padding: 10px;">
                 <ul style="padding-top: 5px;">
                     <li>{{$master->name}} {{$master->lname}}<li>
@@ -42,6 +43,13 @@
                 @else
                 @endif
             </div>
+            <div class="col-sm-4 align-items-start"><h6>Reitingas:⭐⭐⭐⭐⭐({{$master->rating++}})</h6>
+                <form action="/update-rating" method="post">
+                    @csrf
+                    <input type="submit" name="addRating" value="❤">
+                </form>
+            </div>
         @endforeach
+        </div>
     </div>
 @endsection
